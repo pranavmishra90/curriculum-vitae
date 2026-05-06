@@ -20,7 +20,8 @@ on:
   push:
     branches:
       - draft
-      - feature/*
+      - feat/*
+      - ci/*
   # Any Pull Request
   pull_request:
   workflow_dispatch:
