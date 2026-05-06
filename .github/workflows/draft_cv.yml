@@ -28,6 +28,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: dxjoke/tectonic-docker:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -35,6 +36,9 @@ jobs:
       # Biber is used to generate our citations
       - name: Install biber
         run:  sudo apt update && sudo apt-get -y install biber
+
+      - name: Biber version
+        run: biber --version
 
       # Tectonic is the LaTeX engine which downloads packages as they are needed
       - uses: actions/cache@v5
@@ -44,10 +48,10 @@ jobs:
           key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
           restore-keys: |
             ${{ runner.os }}-tectonic-
-      - uses: wtfjoke/setup-tectonic@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - run: biber --version
+      # - uses: wtfjoke/setup-tectonic@v4
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      # - run: biber --version
 
       # Create the PDF from TEX file
       - name: Run Tectonic + Biber
