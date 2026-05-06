@@ -23,6 +23,7 @@ on:
       - feature/*
   # Any Pull Request
   pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -30,12 +31,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
+
       # Biber is used to generate our citations
       - name: Install biber
         run:  sudo apt-get -y install biber
-        
-      # Tectonic is the LaTeX engine which downloads packages as they are needed  
+
+      # Tectonic is the LaTeX engine which downloads packages as they are needed
       - uses: actions/cache@v3
         name: Tectonic Cache
         with:

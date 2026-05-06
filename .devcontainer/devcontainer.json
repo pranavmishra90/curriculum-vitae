@@ -3,7 +3,11 @@
   
 	"customizations": {
 	  "vscode": {
-		"extensions": ["eamodio.gitlens", "James-Yu.latex-workshop"]
+		"extensions": [
+			"eamodio.gitlens",
+			"James-Yu.latex-workshop",
+			"WakaTime.vscode-wakatime"
+		]
 	  }
 	}
   }

@@ -1,7 +1,4 @@
 {
-    "python.condaPath": "C:\\ProgramData\\Anaconda3\\Scripts\\conda-script.py",
-    "python.defaultInterpreterPath": "C:\\ProgramData\\Anaconda3\\python.exe",
-    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
     "python.terminal.activateEnvironment": true,
     "latex-workshop.intellisense.biblatexJSON.replace": {},
   
@@ -18,7 +15,7 @@
         ],
   
         "env": {
-          "TEXMFHOME": "C:/texlive/2022/bin/win32/latex"
+          "TEXMFHOME": "${userHome}/.TinyTeX/bin/x86_64-linux"
         }
       },
       {
@@ -135,7 +132,6 @@
       "~/.*/**": true
     },
     "git.autofetch": true,
-    "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.ignoreMissingGitWarning": true,
     "gitlens.advanced.messages": {
@@ -156,7 +152,6 @@
     "telemetry.enableTelemetry": false,
     "terminal.integrated.automationShell.windows": "PowerShell",
     "terminal.integrated.confirmOnExit": true,
-    "terminal.integrated.enableBell": true,
     "terminal.integrated.inheritEnv": false,
     "terminal.integrated.shell.linux": "/bin/bash",
     "update.mode": "manual",
@@ -177,6 +172,10 @@
       "*/*.run.xml",
       "*/*.synctex.gz" 
     ],
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "accessibility.signals.terminalBell": {
+      "sound": "on"
+    },
+    "terminal.integrated.enableVisualBell": true
   }
   
