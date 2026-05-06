@@ -43,8 +43,7 @@ jobs:
       - name: Run Tectonic + Biber
         run: |
           micromamba activate cv
-          which tectonic
-          tectonic pranav_kumar_mishra_cv.tex --keep-logs
+          micromamba run -n cv tectonic pranav_kumar_mishra_cv.tex --keep-logs
 
 
       # Save the PDF as a GitHub Action Artifact

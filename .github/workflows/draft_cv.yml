@@ -60,7 +60,7 @@ jobs:
 
       # Create the PDF from TEX file
       - name: Run Tectonic + Biber
-        run: tectonic pranav_kumar_mishra_cv.tex --keep-logs
+        run: micromamba run -n cv tectonic pranav_kumar_mishra_cv.tex --keep-logs
 
 
       # Save the PDF as a GitHub Action Artifact
