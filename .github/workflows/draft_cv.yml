@@ -29,7 +29,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: dxjoke/tectonic-docker:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -53,6 +52,11 @@ jobs:
       #   with:
       #     github-token: ${{ secrets.GITHUB_TOKEN }}
       # - run: biber --version
+
+      - uses: mamba-org/setup-micromamba@v2
+        name: Setup micromamba for tectonic
+        with:
+          environment-file: environment.yml
 
       # Create the PDF from TEX file
       - name: Run Tectonic + Biber
